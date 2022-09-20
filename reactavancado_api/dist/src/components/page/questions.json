@@ -2,12 +2,13 @@
     "collectionName": "components_page_questions",
     "info": {
         "displayName": "questions",
-        "icon": "question"
+        "icon": "question",
+        "description": ""
     },
     "options": {},
     "attributes": {
         "question": {
-            "type": "text",
+            "type": "string",
             "required": true
         },
         "answer": {
