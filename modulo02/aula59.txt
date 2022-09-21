@@ -1,0 +1,30 @@
+
+query GET_AUTHORS {
+  authors {
+    data {
+      id
+      attributes {
+        name
+        role
+        description
+      }
+    }
+  }
+}
+
+query GET_LANDING_PAGE {
+  landingPage {
+    data {
+      attributes {
+        logo {
+          data {
+            attributes {
+              alternativeText
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+}
