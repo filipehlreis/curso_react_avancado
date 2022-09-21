@@ -1,0 +1,47 @@
+fragment imageDataFile on UploadFile {
+  alternativeText
+  url
+}
+
+fragment imageDataFileEntity on UploadFileEntity {
+  attributes {
+    ...imageDataFile
+  }
+}
+
+fragment imageData on UploadFileEntityResponse {
+  data {
+    ...imageDataFileEntity
+  }
+}
+
+fragment logo on LandingPage {
+  logo {
+    ...imageData
+  }
+}
+
+fragment header on LandingPage {
+  header {
+    title
+    description
+    button {
+      label
+      url
+    }
+    image {
+      ...imageData
+    }
+  }
+}
+
+query GET_LANDING_PAGE {
+  landingPage {
+    data {
+      attributes {
+        ...logo
+        ...header
+      }
+    }
+  }
+}
