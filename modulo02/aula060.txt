@@ -1,0 +1,55 @@
+query GET_AUTHOR($id: ID!) {
+  author(id: $id) {
+    data {
+      id
+      attributes {
+        name
+        role
+        description
+      }
+    }
+  }
+}
+
+query GET_AUTHORS {
+  authors {
+    data {
+      id
+      attributes {
+        name
+        role
+        description
+      }
+    }
+  }
+}
+
+# {
+#   author(id: 8){
+#     data{
+#       id
+#       attributes{
+#         name
+#         role
+#         description
+#       }
+#     }
+#   }
+# }
+
+query GET_LANDING_PAGE {
+  landingPage {
+    data {
+      attributes {
+        logo {
+          data {
+            attributes {
+              alternativeText
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+}
