@@ -1,0 +1,12 @@
+mutation UPDATE_AUTHOR {
+    updateAuthor(id: 8, data: { name: "Willian Justen" }) {
+      data {
+        id
+        attributes {
+          name
+          role
+        }
+      }
+    }
+  }
+  
