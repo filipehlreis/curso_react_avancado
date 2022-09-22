@@ -1,0 +1,37 @@
+mutation DELETE_AUTHOR {
+  deleteAuthor(id: 29) {
+    data {
+      attributes {
+        name
+        role
+      }
+    }
+  }
+}
+
+mutation CREATE_AUTHOR {
+  createAuthor(
+    data: {
+      name: "Filipe Henrique Leite dos Reis"
+      role: "Instrutor de video"
+      socialLinks: { title: Twitter, url: "https://twitter.com/filipehlreis" }
+      description: "Um maluco muito bom de programacao :D"
+    }
+  ) {
+    data {
+      id
+      attributes {
+        name
+        role
+        description
+        photo {
+          data {
+            attributes {
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+}
