@@ -1,0 +1,11 @@
+mutation UPDATE_AUTHOR($id: ID!, $data: AuthorInput!) {
+  updateAuthor(id: $id, data: $data) {
+    data {
+      id
+      attributes {
+        name
+        role
+      }
+    }
+  }
+}
