@@ -4,8 +4,8 @@ import { NextSeo } from 'next-seo'
 import { AppProps } from 'next/app'
 import { ThemeProvider } from 'styled-components'
 
-import theme from 'styles/theme'
-import GlobalStyle from 'styles/global.styles'
+import theme from 'types/styles/theme'
+import GlobalStyle from 'types/styles/global.styles'
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
