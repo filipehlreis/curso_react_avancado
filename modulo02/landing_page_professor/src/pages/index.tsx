@@ -38,6 +38,7 @@ const Index = ({ data }: landingPageProps) => (
 export const getStaticProps: GetStaticProps = async () => {
   const { landingPage } = await client.request(GET_LANDING_PAGE)
 
+  //TODO: remover depois esse console.log
   console.log(JSON.stringify(landingPage))
 
   return {
