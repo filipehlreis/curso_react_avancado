@@ -34,7 +34,7 @@ export const Image = styled.img`
 
   ${media.lessThan('medium')`
       max-width: 100%;
-  `}
+      {description}</S.Text>`}
 `
 
 export const Text = styled.div`
