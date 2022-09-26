@@ -8,7 +8,7 @@ export default {
       shadowCRUD: true,
       playgroundAlways: false,
       depthLimit: 10,
-      amountLimit: 100,
+      amountLimit: 200,
       apolloServer: {
         tracing: false,
       },
