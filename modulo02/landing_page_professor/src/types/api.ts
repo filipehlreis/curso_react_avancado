@@ -13,6 +13,12 @@ export type Concepts = {
   title: string
 }
 
+export type Modules = {
+  title: string
+  subtitle: string
+  description: string
+}
+
 export type LogoProps = {
   data: {
     attributes: {
@@ -68,10 +74,16 @@ export type SectionConceptsProps = {
   concepts: Concepts[]
 }
 
+export type SectionModulesProps = {
+  title: string
+  modules: Modules[]
+}
+
 export type landingPageProps = {
   logo: LogoProps
   header: HeaderProps
   sectionAboutProject: SectionAboutProjectProps
   sectionTech: SectionTechProps
   sectionConcepts: SectionConceptsProps
+  sectionModules: SectionModulesProps
 }
