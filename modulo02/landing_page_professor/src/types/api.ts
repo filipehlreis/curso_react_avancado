@@ -53,13 +53,15 @@ export type SectionTechProps = {
   techIcons: TechIcon[]
 }
 
-export type landingPageProps = {
+export type landingPageFullProps = {
   data: {
-    attributes: {
-      logo: LogoProps
-      header: HeaderProps
-      sectionAboutProject: SectionAboutProjectProps
-      sectionTech: SectionTechProps
-    }
+    attributes: landingPageProps
   }
+}
+
+export type landingPageProps = {
+  logo: LogoProps
+  header: HeaderProps
+  sectionAboutProject: SectionAboutProjectProps
+  sectionTech: SectionTechProps
 }
