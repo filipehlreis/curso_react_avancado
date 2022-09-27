@@ -104,7 +104,7 @@ const GET_LANDING_PAGE = /* GraphQL */ `
   fragment sectionAboutUs on LandingPage {
     sectionAboutUs {
       title
-      authors {
+      authors(pagination: { limit: 20, start: 0 }) {
         data {
           attributes {
             photo {
@@ -128,6 +128,24 @@ const GET_LANDING_PAGE = /* GraphQL */ `
     }
   }
 
+  fragment sectionReviews on LandingPage {
+    sectionReviews {
+      title
+      reviews {
+        name
+        text
+        photo {
+          data {
+            attributes {
+              alternativeText
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+
   query GET_LANDING_PAGE {
     landingPage {
       data {
@@ -141,6 +159,7 @@ const GET_LANDING_PAGE = /* GraphQL */ `
           ...sectionAgenda
           ...pricingBox
           ...sectionAboutUs
+          ...sectionReviews
         }
       }
     }
